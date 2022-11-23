@@ -3,7 +3,7 @@
     header("Content-Type: application/json; charset=UTF-8");
     
     if ($_POST) {
-        $recipient = "reciever email goes here";
+        $recipient = 'sherine121098@gmail.com';
         $subject = 'Email from site';
         $visitor_name         = "";
         $visitor_email        = "";
@@ -43,8 +43,8 @@
         It is an in-built function of PHP, which is used to insert the HTML line breaks before all newlines in the string. Although, we can also use PHP newline character \n or \r\n inside the source code to create the newline, but these line breaks will not be visible on the browser.
         */
     
-        $headers = 'From: i_am_awesome@awesome.com' . "\r\n" .
-        'Reply-To: jump_off_a_bridge@example.com' . "\r\n" .
+        $headers = 'From: '.$visitor_email."\r\n" .
+        'Reply-To: '.$visitor_email."\r\n" .
         'X-Mailer: PHP/' . phpversion();
         
         if (count($fail)==0) {
@@ -66,3 +66,5 @@
     }
     
     echo json_encode($results);
+
+?>
