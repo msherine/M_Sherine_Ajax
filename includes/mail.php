@@ -25,8 +25,8 @@
             // Replace all occurrences of the search string with the replacement string (empty quotes)
             /* %0A & %0D are the hexidecimal representation of a linefeed, and forces a line break in the email’s header block.  This will help to stop intejection attacks as the user can not create linebreaks and add additional headers.
             */
-            $email = str_replace(array("\r", "\n", "%0a", "%0d"), '', $_POST['email']);
-            $email = filter_var($email, FILTER_VALIDATE_EMAIL);
+            $visitor_email = str_replace(array("\r", "\n", "%0a", "%0d"), '', $_POST['email']);
+            $visitor_email = filter_var($visitor_email, FILTER_VALIDATE_EMAIL);
         }else{
             array_push($fail, "email");
         }
