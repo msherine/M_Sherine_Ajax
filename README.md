@@ -6,6 +6,8 @@
 An Email contact form using AJAx to submit emails.
 The form collects and sends user filled data like user name, email and message to API with success amd failure handling
 
+Attempted project logic doc: https://docs.google.com/document/d/1Lf3hCUCqKehqIENSfNYYJPDiToUMq716Xi_NrJre4nQ/edit?usp=sharing 
+
 ## Installation
 
 To run the project, simply clone the repo to your system
