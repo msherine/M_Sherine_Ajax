@@ -4,7 +4,7 @@
     
     if ($_POST) {
         $recipient = 'sherine121098@gmail.com';
-        $subject = 'Email from site';
+        $subject = 'Email from Sherine McEween website';
         $visitor_name         = "";
         $visitor_email        = "";
         $message      = "";
@@ -49,7 +49,7 @@
         
         if (count($fail)==0) {
             //echo count($fail);
-            mail($recipient, $subject, $message, $headers);
+            mail($recipient, $subject, $message, $headers); 
             /* In printf, %s is a placeholder for data that will be inserted into the string. 
             The extra arguments to printf are the values to be inserted. They get associated with 
             the placeholders positionally: the first placeholder gets the first value, the second 
