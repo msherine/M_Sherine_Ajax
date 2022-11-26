@@ -9,7 +9,7 @@
 }
 
 body {
-  background-color: #333;
+  background-color: white;
   color: white;
   font-size: 16px;
   font-family: "arial", "helvetica", sans-serif;
@@ -20,13 +20,13 @@ main {
 }
 main h2 {
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.5);
+  color: #695752;
   font-size: 1.5em;
   margin-bottom: 0.8em;
 }
 main hr {
   width: 80%;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid #695752;
   margin: 40px 0;
 }
 main p {
@@ -34,7 +34,11 @@ main p {
 }
 
 .error {
-  border: 4px solid red;
+  border: 2px solid rgb(250, 39, 82);
+}
+
+.success {
+  border: 4px solid rgb(70, 155, 70);
 }
 
 label {
@@ -48,7 +52,7 @@ label:first-of-type {
 
 input[type=text], input[type=email], input[type=tel], textarea {
   padding: 0.6em;
-  color: #333;
+  color: #695752;
   border-radius: 4px;
   width: 250px;
 }
@@ -58,14 +62,14 @@ input[type=submit] {
   margin-top: 2em;
   padding: 0.75rem 3.3rem 0.75rem 0.75rem;
   border-radius: 0.5rem;
-  background-color: #78abeb;
+  background-color: #ba6e5d;
   cursor: pointer;
   font-size: 1.2em;
   color: white;
   font-weight: bolder;
 }
 input[type=submit]:hover {
-  background-color: #5588c8;
+  background-color: #695752;
 }
 
 .wrapper {

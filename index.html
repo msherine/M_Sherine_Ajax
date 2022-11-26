@@ -11,30 +11,46 @@
 <body>
     <main>
         <h1 class="hidden">Mail Reference for API Processing</h1>
-        <h2>Some Generic Contact Message Here</h2>
+        <h2>Thanks for visiting my website!</h2>
         <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis quae aliquid eaque numquam facere ratione molestiae temporibus quibusdam, dolor voluptatibus cupiditate sed error expedita assumenda. Vitae nulla recusandae minima inventore?
+            If you would like to contact me, please fill out this form to send me an email. Thank you!
         </p>
 
         <hr class="separator">
 
-        <h2 class="mail-header">Processing Mail with AJAX</h2>
+        <h2 class="mail-header">Mail</h2>
 
         <form action="../M_Sherine_Ajax/includes/mail.php" method="POST" id="mail-form">
             <label for="firstname">First Name</label>
-            <input ref="fname" type="text" id="firstname" name="firstname" required="required">
+            <div v-if="fnameError">
+                <p>Please fill out your firstname!</p>
+            </div>
+            <input ref="fname" v.model="form.firstname" type="text" id="firstname" name="firstname" required="required">
 
             <label for="lastname">Last Name</label>
-            <input ref="lname" type="text" id="lastname" name="lastname" required>
+            <div v-if="lnameError">
+                <p>Please fill out your lastname!</p>
+            </div>
+            <input ref="lname" v.model="form.lastname" type="text" id="lastname" name="lastname" required>
 
             <label for="firstname">Email</label>
-            <input ref="email" type="email" id="email" name="email" required>
+            <div v-if="emailError">
+                <p>You forgot to enter your email!</p>
+            </div>
+            <input ref="email" v.model="form.email" type="email" id="email" name="email" required>
 
             <label for="message">Your Message</label>
-            <textarea ref="message" name="message" id="message" cols="30" rows="10"></textarea>
+            <div v-if="messageError">
+                <p>Please fill out your message!!</p>
+            </div>
+            <textarea ref="message" v.model="form.message" name="message" id="message" cols="30" rows="10" required></textarea>
 
             <label for="phone">Your Phone # <i>(optional)</i></label>
             <input ref="phone" type="tel" value="tel" name="phone">
+
+            <div v-if="msgSuccess">
+                <p>Successfully sent!</p>
+            </div>
             
             <div class="wrapper">
                 <input @click.prevent="processMail" type="submit" class="submit" value="Go!">
